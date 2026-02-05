@@ -1,5 +1,5 @@
 export   async function fetchData(){
-    const res = await fetch("http://localhost:8080/albums")
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/albums`)
     if(!res.ok){
             throw new Error("Failed to fetch posts")
 
