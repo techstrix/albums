@@ -11,7 +11,7 @@ export   async function fetchData(){
 
 export  async function CreateAlbum(newAlbum:{title:string,artist:string,price:number}){
 
-    const res = await fetch("https://yabbering-trudy-personalxorbi-408d7d3c.koyeb.app/albums",{
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/albums`,{
         method:"POST",
         headers:{
          "Content-Type": "application/json",
